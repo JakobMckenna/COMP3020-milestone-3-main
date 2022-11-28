@@ -1,0 +1,815 @@
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+body {
+
+  background-color: rgba(218, 218, 27, 0.364);
+  display: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs {
+  width:  350px;
+  height: 600px;
+  display: left;
+  float: left;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+   /*color:#19145c; */
+  /* font-size:5px; */
+}
+
+h1 {
+color: rgb(216, 30, 6);
+}
+
+/* the REAL website */
+
+.top_bar
+{
+  overflow: hidden;
+  background-color: rgb(32, 179, 118);
+  padding: 32px;
+  border: none;
+  font-size: 17px;
+  color: black;
+}
+.dropdown ::placeholder/*place holder text colour ("searh...")*/
+{
+  color:black;
+}
+.dropdown input[type=text]
+{/*search bar*/
+  padding: 6px;
+  border: none;
+  margin-top: -50px;
+  margin-right: 16px;
+  font-size: 20px;
+  color: black;
+  position: relative;
+  display: block;
+}
+.dropdown-content {
+  display:block;
+  position: absolute;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  min-width: 200px;
+  z-index: 9999;
+}
+
+.dropdown-content a
+{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  z-index: 999;
+}
+
+/* EVERYTHING IN THIS BLOCK IS FOR THE CARDS */
+
+/* Add animation (fade in the popup) */
+
+ .big-cards {
+  color:black;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  display:none;
+  z-index: 1;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* The Close Button */
+.close {
+  color: grey;
+  float: right;
+  font-size: 200%;
+  font-weight: bold;
+  margin-right: 2%;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.small-cards {
+  color: black;
+  width: 10%;
+  height: auto;
+  font-size: 200%;
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  margin: auto;
+
+  box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.small-cards .card-title {
+  font-size: 50%;
+}
+
+.big-cards .card-title {
+  font-size: 150%;
+}
+
+.card-content {
+  margin:auto;
+  padding:20px;
+  width:40%;
+  height:auto;
+  border-radius: 5px;
+}
+
+
+.small-content {
+  border-radius: 5px;
+  padding: 2px;
+  margin: 4px 0 4px 0;
+}
+
+.movies .small-content {
+  background-color: #8A9A5B;
+}
+.movies .card-content{
+  background-color: #8A9A5B;
+}
+.movies .card-text {
+  background-color: #B3D6AD;
+}
+
+.music .small-content{
+  background-color: #A020F0;
+}
+.music .card-content {
+  background-color: #A020F0;
+}
+.music .card-text {
+  background-color: #6666ff;
+}
+
+.games .small-content {
+  background-color: #40e0d0;
+}
+.games .card-content {
+  background-color: #40e0d0;
+}
+.games .card-text {
+  background-color: #b2f2ec;
+}
+
+.tv .small-content {
+  background-color: #e9630a;
+}
+.tv .card-content {
+  background-color: #e9630a;
+}
+.tv .card-text {
+  background-color: #f4b184;
+}
+
+.books .small-content {
+  background-color: #f44336;
+}
+.books .card-content {
+  background-color: #f44336;
+}
+.books .card-text {
+  background-color: #f88e86;
+}
+
+
+.card-text {
+  margin: 5%;
+  padding: 5%;
+  border-radius: 5px;
+}
+
+.card-title {
+  text-align: center;
+  font-size:50%;
+  font-weight:bold;
+  text-decoration: underline;
+  padding-bottom:2%;
+}
+
+.card-info-titles {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-body {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  max-height: 10%;
+  max-width:80%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+
+.add {
+  background-color: green;
+  display: block;
+  cursor: pointer;
+}
+
+.remove {
+  background-color: red;
+  display: none;
+  cursor: pointer;
+}
+
+/* END DETAILS FOR ITEM CARDS */
+
+
+.tab {
+  border-style: solid;
+  width:  350px;
+  height: 100px;
+  background-color:rgb(0, 255, 179);
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab2{
+ border-style: solid;
+  width:  350px;
+  height: 100px;
+  background-color:rgb(255, 0, 60);
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  background-color:rgb(0, 255, 179);
+}
+
+.tab:hover {
+  background-color: rgb(218, 27, 27);
+}
+
+.tab-content {
+  background-color: rgb(17, 0, 255);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container{
+
+  box-sizing: border-box;
+  width:348px;
+  height: 100vh;
+  background: green
+  border-radius 15px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left:74%;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow-y: auto;
+
+}
+
+.container::-webkit-scrollbar{
+  display: none;
+}
+
+.container form{
+  width: 100%;
+  border: 1px solid brown;
+  border-radius: 10px;
+}
+
+.gamecards{
+  padding: 15px;
+}
+
+.container form input{
+  width: 95%;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 6px 8px;
+}
+
+.title{
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 1px;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+body {
+  background-color: rgba(218, 218, 27, 0.364);
+  display: relative; 
+  padding: 0;
+  margin: 0;
+}
+
+.tabs {
+  width:  350px;
+  height: 600px;
+  display: left;
+  float: left;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+   /*color:#19145c; */
+  /* font-size:5px; */
+/* } */
+}
+.h1 {
+color: rgb(216, 30, 6);
+}
+
+/* the REAL website */
+
+.top_bar
+{
+  overflow: auto;
+  background-color: rgb(32, 179, 118);
+  padding: 32px;
+  border: none;
+  font-size: 17px;
+  color: black;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  top: 40px;
+  left: 500px;
+  z-index: 100;
+  z-index: 9999;
+}
+
+.dropdown ::placeholder/*place holder text colour ("searh...")*/
+{
+  color:black;
+}
+
+.dropdown input[type=text]
+{/*search bar*/
+  padding: 6px;
+  border: none;
+  margin-top: -28px;
+  margin-right: 16px;
+  font-size: 20px;
+  color: black;
+  position: relative;
+  display: block;
+  z-index: 9999;
+}
+.dropdown-content {
+  display:block;
+  position: absolute;
+  left: 400px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  width: 100%;
+  z-index: 9999;
+}
+
+.dropdown-content a
+{
+  left: 200px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  z-index: 9999;
+  left: 300px;
+}
+
+/* EVERYTHING IN THIS BLOCK IS FOR THE CARDS */
+
+/* Add animation (fade in the popup) */
+
+ .big-cards {
+  color:black;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  display:none;
+  z-index: 1;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.2);
+  animation: fadeIn 0.5s;
+  border-radius: 5px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* The Close Button */
+.close {
+  color: grey;
+  float: right;
+  font-size: 200%;
+  font-weight: bold;
+  margin-right: 2%;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.small-cards {
+  color: black;
+  width: 10%;
+  height: auto;
+  font-size: 200%;
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  margin: auto;
+}
+
+.small-cards .card-title {
+  font-size: 50%;
+}
+
+.big-cards .card-title {
+  font-size: 150%;
+}
+
+.card-content {
+  margin:auto;
+  padding:20px;
+  border:1px solid #888;
+  width:40%;
+  height:auto;
+}
+
+
+.movies .small-content {
+  background-color: #8A9A5B;
+}
+.movies .card-content{
+  background-color: #8A9A5B;
+}
+.movies .card-text {
+  background-color: #B3D6AD;
+}
+
+.music .small-content{
+  background-color: #A020F0;
+}
+.music .card-content {
+  background-color: #A020F0;
+}
+.music .card-text {
+  background-color: #6666ff;
+}
+
+.games .small-content {
+  background-color: #40e0d0;
+}
+.games .card-content {
+  background-color: #40e0d0;
+}
+.games .card-text {
+  background-color: #b2f2ec;
+}
+
+.tv .small-content {
+  background-color: #e9630a;
+}
+.tv .card-content {
+  background-color: #e9630a;
+}
+.tv .card-text {
+  background-color: #f4b184;
+}
+
+.books .small-content {
+  background-color: #f44336;
+}
+.books .card-content {
+  background-color: #f44336;
+}
+.books .card-text {
+  background-color: #f88e86;
+}
+
+
+.card-text {
+  margin: 5%;
+  padding: 5%;
+}
+
+.card-title {
+  text-align: center;
+  font-size:50%;
+  font-weight:bold;
+  text-decoration: underline;
+  padding-bottom:2%;
+}
+
+.card-info-titles {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-body {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  max-height: 10%;
+  max-width:80%;
+  padding-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* END DETAILS FOR ITEM CARDS */
+
+
+.tab {
+  border-style: solid;
+  width:  350px;
+  height: 100px;
+  background-color:rgb(0, 255, 179);
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab2{
+ border-style: solid;
+  width:  350px;
+  height: 100px;
+  background-color:rgb(255, 0, 60);
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  background-color:rgb(0, 255, 179);
+}
+
+.tab:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.tab-content {
+  background-color: rgb(17, 0, 255);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container{
+
+  box-sizing: border-box;
+  width:348px;
+  height: 100vh;
+  background: green
+  border-radius 15px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left:74%;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow-y: auto;
+
+}
+
+.container::-webkit-scrollbar{
+  display: none;
+}
+
+.container form{
+  width: 100%;
+  border: 1px solid brown;
+  border-radius: 10px;
+}
+
+.gamecards{
+  padding: 15px;
+}
+
+.container form input{
+  width: 95%;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 6px 8px;
+}
+
+.title{
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 1px;
+}
+
+
+/* NEW SIDE BAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+* {box-sizing: border-box}
+/* body {font-family: "Lato", sans-serif;} */
+
+/* Style the left_bar */
+.left_bar {
+  float: left;
+  border-right: 2px solid black;
+  background-color: #83bd96;
+  width: 20%;
+  height: 100vh;
+
+  overflow-y: auto; /* creates scroll bar for overflow*/
+}
+
+/* Style the buttons inside the left_bar */
+.left_bar > button { /* '>' only changes buttons NOT in a div */
+  display: block;
+  /* border: 1px solid black; */
+  background-color: #f88e86;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  border-color: rgb(2, 8, 6);
+  border-style: solid; 
+  border-width: 1px 0px 1px 0px; 
+}
+
+/* Change background color of buttons on hover */
+.left_bar > button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.left_bar > button.active {
+  background-color: #ccc;
+}
+
+/* Style the left bar content (right screen?)*/
+.left_bar_content {
+  display: none;
+  float: left;
+  text-align: center;
+  padding: 0px 12px;
+  border: 1px solid rgb(124, 20, 20);
+  border-left: none;
+  width: 80%;
+  height: 100vh;
+}
+
+/* edit buttons start */
+.sub_edit_buttons {
+  display: block;
+  width: 100%;
+  background-color: #e9630a;
+  padding: 5.5px 0px 5.5px 0px;
+  border-color: rgb(2, 8, 6);
+  border-style: solid;
+  border-width: 1px 0px 1px 0px; 
+}
+
+.sub_edit_buttons > button {
+  border-width: 2px;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50px;
+  transition-duration: 0.4s;  
+}
+
+.sub_edit_buttons > button:hover {filter: brightness(140%);} 
+
+.add_button{
+  width: 20%;
+  font-size: 40px;
+  background-color: #029b23;
+  border-color: #029b23;
+  padding-top: 3px;
+  padding-left: 6px;
+  margin-left: 5px;
+}
+
+.remove_button{
+  width: 20%;
+  font-size: 40px;
+  background-color:darkred;
+  border-color: darkred;
+  padding-top: 3px;
+  padding-left: 4px;
+}
+
+.rename_button{
+  width: 20%;
+  font-size: 35px;
+  background-color:darkgoldenrod;
+  border-color: darkgoldenrod;
+}
+
+.confirm_button{
+  width: 20%;
+  font-size: 35px;
+  background-color:midnightblue;
+  border-color: midnightblue;
+  margin-left: 31px;
+}
+
+.input_box{
+  width: 100%; 
+  font-size: 26px;
+  color: aliceblue;
+  background-color: rgb(219, 96, 24); 
+  border-color: rgb(219, 96, 24);
+  border-width: 1px 1px 1px 0px; 
+  padding: 3px 8px;
+}
+
+::placeholder{ color: antiquewhite;} /* changes the colour of the placeholder text */
+
+.chkboxes{
+  display: none ;
+  /* margin-right: 50px; */
+}
+
+.page_outline{
+  display: block;
+
+  float: right;
+  width: 200px;
+  margin: 50px 180px 0px 0px; /*top rifht bottom left*/
+} /*page_outline*/
+
+.page_outline2{
+  display: block;
+  float: right;
+  width: 200px;
+  margin: 50px 250px 0px 0px; /*top rifht bottom left*/
+}
+
+.page_outline3{
+  display: block;
+  float: right;
+  width: 200px;
+  margin: 400px 180x 50px 50px; /*top rifht bottom left*/
+} /*page_outline*/
+
+.page_outline4{
+  display: block;
+  float: right;
+  width: 200px;
+  margin: 100px 180px 0px 200px; /*top rifht bottom left*/
+
+} /*page_outline*/
+/* edit buttons END */

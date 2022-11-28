@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="myScript.js" defer></script>
+  <link href="myStyles.css" rel="stylesheet">
+  <title>Tabs</title>
+
+
+  <style>
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+  </style>
+
+</script> 
+
+</head>
+<body>
+  <ul class="tabs">
+    <li data-tab-target="#HomePage" class="active tab" style="background-color:yellow">Home Page</li>
+    <li data-tab-target="#Movies" class="tab" style="background-color:#8A9A5B" >Movies</li>
+    <li data-tab-target="#Games" class="tab" style="background-color:#40e0d0">Games</li>
+    <li data-tab-target="#TVShows" class="tab" style="background-color:#e9630a">TV Shows</li>
+    <li data-tab-target="#Books" class="tab" style="background-color:#f44336">Books</li>
+    <li data-tab-target="#AddNew" class="tab" style="background-color:purple">Add New</li>
+  </ul>
+
+  <div class="tab-content">
+
+    <div id="HomePage" data-tab-content class="active">
+       
+      <h1 style=padding-left:250px; text-align:center;>Organization Meets you!</h1>
+      <p style=padding-left:250px; text-align:center;>This website is designed to allow you to sort anything you want or need!</p>
+      <p style=padding-left:250px; text-align:center;>Movies, Books, TV Shows, or anything you want to add. Have fun!</p>
+  
+    </div>
+    <div id="Movies" data-tab-content>
+     
+      <h1 style=padding-left:350px; text-align:center;>Movies</h1>
+      <p style=padding-left:350px; text-align:center;>View/Edit your movies!</p>
+     
+    </div>
+    <div id="Games" data-tab-content>
+      <h1 style=padding-left:350px; text-align:center;>Games</h1>
+      <p style=padding-left:350px; text-align:center;>View/Edit your games!</p>
+ 
+    </div>
+    <div id="TVShows" data-tab-content>
+      <h1 style=padding-left:350px; text-align:center;>TV Shows</h1>
+      <p style=padding-left:350px; text-align:center;>View/Edit your TV Shows!</p>
+   </div>
+
+   <div id="Books" data-tab-content>
+    <h1 style=padding-left:350px; text-align:center;>Books</h1>
+    <p style=padding-left:350px; text-align:center;>View/Edit your Books!</p>
+ </div>
+
+ <div id="AddNew" data-tab-content>
+  <h1 style=padding-left:300px; text-align:center;>Add a new tab!</h1>
+  <p style=padding-left:300px; text-align:center;>Test</p>
+</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="myStyles.css">
+    <script src="myScript.js"></script>
+    <title>Organization Meets You</title>
+  </head>
+
+  <body> 
+
+<div id="id_left_bar" class="left_bar">
+  <button class="left_bar_links" onclick="openTabb(event, 'id_home')" id="defaultOpen">Home</button>
+  <button id="id_main_edit_button" class="left_bar_links main_edit_button" onclick="showEditButtons(event, 'id_Edit')">Edit</button>
+
+  <div id="id_sub_edit_buttons" class="sub_edit_buttons">
+    <button class="add_button" onclick="actionAdd('add_button')"><b>+</b></button>
+    <button class="remove_button" onclick="actionRemove('remove_button')"><b>&#8722</b></button>
+    <button class="rename_button" onclick="actionRename('rename_button')"><b>&#9998</b></button> 
+    <button id="id_confirm_button" class="confirm_button" onclick="actionConfirm('confirm_button')"><b>&#10004</b></button> 
+  </div>
+
+  <button id="id_tab_games" class="left_bar_links"  style = "background-color: #40e0d0" onclick="openTabb(event, 'id_games')">
+  <input type="checkbox" id="id_chkbox_games" name="chekaboxa" class="chkboxes">Games</button>
+
+  <button id="id_tab_tv" class="left_bar_links" style = "background-color: #e9630a" onclick="openTabb(event, 'id_tv')">
+  <input type="checkbox" id="id_chkbox_tv" name="chekaboxa" class="chkboxes">Tv</button>
+
+  <button id="id_tab_movies" class="left_bar_links" style = "background-color: #8A9A5B"onclick="openTabb(event, 'id_movies')">
+  <input type="checkbox" id="id_chkbox_movies" name="chekaboxa" class="chkboxes">Movies</button>
+
+  <button id="id_tab_books" class="left_bar_links" style = "background-color: #f44336" onclick="openTabb(event, 'id_books')">
+  <input type="checkbox" id="id_chkbox_books" name="chekaboxa" class="chkboxes">Books</button>
+
+  <button id="id_tab_music" class="left_bar_links" style = "background-color: #A020F0" onclick="openTabb(event, 'id_music')">
+  <input type="checkbox" id="id_chkbox_music" name="chekaboxa" class="chkboxes">Music</button>
+
+</div>
+
+<div id="id_home" class="left_bar_content">
+  <h3>Organization Meets You!</h3>
+  <p>A brand new website that lets you organize all of your items in one place. </p>
+  <p>Select a category on the left side of the screen, or even add your own by clicking edit </p>
+</div>
+
+<div id="id_Edit" class="left_bar_content">
+  <h3>EDIT</h3>
+  <p>should be no content...</p> 
+</div>
+
+<div id="id_games" class="left_bar_content">
+  <h3>GAMES</h3>
+  <p>games content...</p>
+
+  <div class="page_outline">
+    <div class="games" id="small-mario-kart">
+      <div class="small-content">
+          <img src="https://cdn.discordapp.com/attachments/975090387448389652/1044741579941879910/unknown.png"/>
+          <div class="card-text">
+              <div class="card-title">Mario Kart 8 - Deluxe</div>
+          </div>
+      </div>
+  </div>
+  </div>
+  <div class="page_outline2">
+  <div class="games" id="small-cyberpunk2077">
+      <div class="small-content">
+          <img src="https://cdn.discordapp.com/attachments/975090387448389652/1044741700872065094/unknown.png"/>
+          <div class="card-text">
+              <div class="card-title">Cyberpunk 2077</div>
+          </div>
+      </div>
+  </div>
+  </div>
+  <div class="page_outline4">
+  <div class="games" id="small-xelda">
+      <div class="small-content">
+          <img src="https://cdn.discordapp.com/attachments/975090387448389652/1044742069844967534/unknown.png"/>
+          <div class="card-text">
+              <div class="card-title">Xelda</div>
+          </div>
+      </div>
+  </div>
+  </div>
+
+</div>
+
+<div id="id_tv" class="left_bar_content">
+  <h3>TV</h3>
+  <p>tv content...</p>
+</div>
+
+<div id="id_movies" class="left_bar_content">
+  <h3>MOVIES</h3>
+  <p>movies content...</p> 
+</div>
+
+<div id="id_books" class="left_bar_content">
+  <h3>BOOKS</h3>
+  <p>books content...</p>
+</div>
+
+<div id="id_music" class="left_bar_content">
+  <h3>MUSIC</h3>
+  <p>music content...</p>
+</div>
+
+
+    <!-- forget everything below and light yourself a new -->
+
+    <script>
+      var title;//create 
+    </script>
+    <div class="top_bar">
+      
+    </div><!-- top_bar with search bar -->
+    <div class="dropdown">
+      <center><input id="search"
+        type="text"
+        placeholder="Search..."
+        onkeyup="search_title()">
+        <div id="dropdown" class"dropdown-content">
+        <div id="myDropdown" class"dropdown-content">
+          <title href="#">How to Train Your Dragon</title>
+          <title href="#">Princess Mononoke</title>
+          <title href="#">Shrek</title>
+          <title href="#">The Last Of The Real Ones</title>
+          <title href="#">Faded</title>
+          <title href="#">Sick Of U</title>
+          <title href="#">Cyberpunk 2077</title>
+          <title href="#">Mario Kart 8 - Deluxe</title>
+          <title href="#">Xelda</title>
+          <title href="#">Dragon Ball</title>
+          <title href="#">Friends</title>
+          <title href="#">The Office (US)</title>
+          <title href="#">Harry Potter and the Philosopher's stone</title>
+          <title href="#">Multiple Piece</title>
+          <title href="#">I Am Number Four</title>
+        </div> 
+      </center>
+    </div>
+
+  </body>
+</html>
